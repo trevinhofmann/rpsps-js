@@ -1,9 +1,9 @@
 <div class="container create">
 	<div class="form">
-		<form>
-			<input class="inputElement" type="text" placeholder="Nickname" ng-value="" />
-			<input class="inputElement" type="text" placeholder="Bet Per Game" ng-value="" />
-			<input class="inputElement" type="text" placeholder="Number of Games" ng-value="" />
+		<form ng-submit="submit()" ng-controller="CreateCtrl">
+			<input class="inputElement" ng-model="game.nickname" type="text" placeholder="Nickname" ng-value="" />
+			<input class="inputElement" ng-model="game.betPerGame" type="text" placeholder="Bet Per Game" ng-value="" />
+			<input class="inputElement" ng-model="game.numGames" type="text" placeholder="Number of Games" ng-value="" />
 			<input class="inputElement btn btn-success" type="submit" ng-value="Create" />
 		</form>
 	</div>

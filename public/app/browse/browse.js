@@ -9,29 +9,15 @@ angular.module('myApp.browse', ['ngRoute', 'ngResource'])
   });
 }])
 
-.controller('BrowseCtrl', ['$scope', '$resource', function($scope, $resource) {
+.controller('BrowseCtrl', ['$scope', '$http', function($scope, $http) {
 
-
-	$scope.games = [
-		{
-			nickname: 'Bob',
-			number: '7',
-			bet: '100',
-			escrow: '10'
-		},
-		{
-			nickname: 'Trudy',
-			number: '9',
-			bet: '150',
-			escrow: '2'
-		},
-		{
-			nickname: 'Alice',
-			number: '7',
-			bet: '130',
-			escrow: '6'
-		},
-	];
-
-	console.log($scope.games);
+	$http.get('http://localhost:7175/local/games').
+	
+	success(function(data, status, headers, config) {
+	    $scope.games = data;
+	    console.log($scope.games);
+	}).
+  error(function(data, status, headers, config) {
+    //some error
+	});
 }]);
