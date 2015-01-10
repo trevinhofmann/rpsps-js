@@ -50,3 +50,23 @@ exports.checkInvitation = function(req,res){
 exports.checkForInvitations = function(req,res){
     res.json(CONNECTIONS.checkForInvitations());
 };
+
+//accepts an invitation
+exports.acceptInvitation(req,res){
+    var nickname = req.body.nickname;
+    var ip = req.body.ip;
+    
+    CONNECTIONS.acceptInvitation(nickname,ip);
+    
+    res.json({status:"success"});
+}
+
+//declines an invitation
+exports.declineInvitation(req,res){
+    var nickname = req.body.nickname;
+    var ip = req.body.ip;
+    
+    CONNECTIONS.declineInvitation(nickname,ip);
+    
+    res.json({status:"success"});
+}
