@@ -6,7 +6,7 @@ exports.recieveHash(req,res){
     GAME.submitHash(hash);
 };
 
-//takes RPS choice and passes it on 
+//takes RPS choice from opponent back-end
 exports.recieveRPSMessage(req,res){
     var message = req.body.message;
     GAME.submitDecision(message);
@@ -16,4 +16,10 @@ exports.recieveRPSMessage(req,res){
 exports.recieveSignature(req,res){
     var sig =req.body.signature;
     GAME.submitSignature(sig);
-}
+};
+
+//gets RPS choice from client
+exports.getMyDesicion(req,res){
+    var decision = req.body.decision;
+    GAME.submitMyDecision(decision);
+};
