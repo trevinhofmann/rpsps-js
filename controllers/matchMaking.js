@@ -40,13 +40,13 @@ exports.createGame = function(req,res){
 
 //Requests to join a game and returns accept,denied,or pending
 exports.checkInvitation = function(req,res){
-    var invStatus = connections.checkForInvitation();
+    var invStatus = connections.checkInvitation();
     var returnedStatus = {status:invStatus};
     
     res.json(returnedStatus);
 };
 
 //Gets a list of clients attempting to join your game.Returns an empty array if no clients attempting to join
-exports.checkForInvitation = function(req,res){
-    res.json(connections.checkForInvitation());
+exports.checkForInvitations = function(req,res){
+    res.json(connections.checkForInvitations());
 };
