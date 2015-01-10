@@ -9,7 +9,7 @@ angular.module('myApp.create', ['ngRoute'])
   });
 }])
 
-.controller('CreateCtrl', ['$scope', '$http', function($scope, $http) {
+.controller('CreateCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
 
 	$scope.game = {
 		nickname: null,
@@ -21,7 +21,12 @@ angular.module('myApp.create', ['ngRoute'])
 		$http.post('http://localhost:7175/local/create', $scope.game).
 
 		success(function(data, status, headers, config) {
-		    $scope.games = data;
+		    $scope.game['nickname'] = "";
+		    $scope.game['betPerGame'] = "";
+		    $scope.game['numGames'] = "";
+
+		    $location.path('/waiting');
+
 		}).
 	  error(function(data, status, headers, config) {
 	    //some error
