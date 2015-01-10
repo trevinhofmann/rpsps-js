@@ -8,18 +8,20 @@ exports.invite = function (req,res){
     res.json(connectionSuccess);
 };
 
-exports.listOpenGames(req,res){
+exports.listOpenGames = function(req,res){
+    connections.getOpenGames(function (openList){
+        res.json(openList);
+    });    
+};
+
+exports.createGame = function(req,res){
     
 };
 
-exports.createGame(req,res){
+exports.checkInvitation = function(req,res){
     
 };
 
-exports.checkInvitation(req,res){
-    
-};
-
-exports.checkForInvitation(req,res){
+exports.checkForInvitation = function(req,res){
     
 };
