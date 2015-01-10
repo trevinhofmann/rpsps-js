@@ -15,7 +15,15 @@ exports.listOpenGames = function(req,res){
 };
 
 exports.createGame = function(req,res){
+    var nickname = req.body.nickname;
+    var numGames = req.body.numGames;
+    var betPerGame = req.body.betPerGame;
+    var ip = req.body.ip;
     
+    var success = conections.createGame(nickname,numGames,betPerGame,ip);
+    var creationSuccess = {status:success};
+    
+    res.json(creationSuccess);
 };
 
 exports.checkInvitation = function(req,res){
