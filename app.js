@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+var multer = require('multer');
 
 // Use 'views' as the directory for HTML views.
 app.set('views', __dirname + '/views');
