@@ -27,7 +27,10 @@ exports.createGame = function(req,res){
 };
 
 exports.checkInvitation = function(req,res){
+    var invStatus = connections.checkForInvitation();
+    var returnedStatus = {status:invStatus};
     
+    res.json(returnedStatus);
 };
 
 exports.checkForInvitation = function(req,res){
