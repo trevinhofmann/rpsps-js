@@ -32,7 +32,7 @@ exports.createGame = function(req,res){
     var numGames = req.body.numGames;
     var betPerGame = req.body.betPerGame;
     
-    CONECTIONS.createGame(nickname,numGames,betPerGame);
+    CONNECTIONS.createGame(nickname,numGames,betPerGame);
     
     var creationSuccess = {status:"success"};
     //passes back that the creation was successful
