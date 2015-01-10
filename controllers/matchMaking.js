@@ -28,10 +28,11 @@ exports.listOpenGames = function(req,res){
 
 //Creates a new game based on the input parameters (#games, and bet per game)
 exports.createGame = function(req,res){
+    var nickname = req.body.nickname;
     var numGames = req.body.numGames;
     var betPerGame = req.body.betPerGame;
     
-    CONECTIONS.createGame(numGames,betPerGame);
+    CONECTIONS.createGame(nickname,numGames,betPerGame);
     
     var creationSuccess = {status:"success"};
     //passes back that the creation was successful
@@ -52,21 +53,21 @@ exports.checkForInvitations = function(req,res){
 };
 
 //accepts an invitation
-exports.acceptInvitation(req,res){
+exports.acceptInvitation = function(req,res){
     var nickname = req.body.nickname;
     var ip = req.body.ip;
     
     CONNECTIONS.acceptInvitation(nickname,ip);
     
     res.json({status:"success"});
-}
+};
 
 //declines an invitation
-exports.declineInvitation(req,res){
+exports.declineInvitation = function(req,res){
     var nickname = req.body.nickname;
     var ip = req.body.ip;
     
     CONNECTIONS.declineInvitation(nickname,ip);
     
     res.json({status:"success"});
-}
+};
