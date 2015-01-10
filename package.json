@@ -1,0 +1,33 @@
+{
+  "name": "rpsps-js",
+  "version": "0.0.1",
+  "description": "A NodeJS browser-based implementation of Rock-Paper-Scissors Protocol Secure",
+  "homepage": "https://github.com/thofmann/rpsps-js",
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/thofmann/rpsps-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thofmann/rpsps-js/issues",
+    "email": "trevinhofmann@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Trevin Hofmann",
+      "email": "trevinhofmann@gmail.com"
+    },
+    {
+      "name": "Quentin Caffero",
+      "email": "cafferoq@msoe.edu"
+    },
+    {
+      "name": "Jake Robers",
+      "email": "robersj@msoe.edu"
+    }
+  ],
+  "dependencies": {
+    "express": "*",
+    "bitcore": "*"
+  },
+  "main": "app.js"
+}
