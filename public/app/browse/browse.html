@@ -1,5 +1,16 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="container browse">
+	<table>
+		<tr>
+			<th>Nickname</th>
+			<th>Number of Games</th>
+			<th>Bet per Game</th>
+			<th>Escrow Amount</th>
+		</tr>
+		<tr ng-repeat="game in games">
+	 		<td>{{game.nickname}}</td>
+	 		<td>{{game.number}}</td>
+	 		<td>{{game.bet}}</td>
+	 		<td>{{game.escrow}}</td>	
+	 	</tr>
+	</table>
+</div>
