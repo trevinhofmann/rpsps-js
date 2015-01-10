@@ -10,6 +10,15 @@ GLOBAL.GAME = require('./lib/game');
 // Render static files from the 'public' directory.
 app.use(express.static(__dirname + '/public/app/'));
 
+// Parse POST application/json data
+app.use(bodyParser.json());
+
+// Parse POST application/x-www-form-urlencoded data
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Parse POST multipart/form-data
+app.use(multer());
+
 // Use the routes.js script to point requests to the appropriate rendering script.
 require('./lib/routes')(app);
 

@@ -27,7 +27,9 @@
   ],
   "dependencies": {
     "express": "*",
-    "request": "*"
+    "request": "*",
+    "body-parser": "*",
+    "multer": "*"
   },
   "main": "app.js"
 }
