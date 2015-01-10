@@ -1,6 +1,5 @@
 'use strict'; //not important, just include it
 
-
 exports.invite = function (req,res){
     var ip = req.body.ip;
     var success = connections.connect(ip);
@@ -34,5 +33,5 @@ exports.checkInvitation = function(req,res){
 };
 
 exports.checkForInvitation = function(req,res){
-    
+    res.json(connections.checkForInvitation());
 };
