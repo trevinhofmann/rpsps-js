@@ -1,10 +1,10 @@
 'use strict'; //not important, just include it
 
-//Takes in the ip you're connecting to and calls connections.connect to create the socket
+//Takes in the ip you're connecting to and calls CONNECTIONS.connect to create the socket
 exports.invite = function (req,res){
     var ip = req.body.ip;
     
-    connections.connect(ip, function(connStatus){
+    CONNECTIONS.connect(ip, function(connStatus){
         if (connStatus){
             var success = "success";
         }else{
@@ -21,7 +21,7 @@ exports.invite = function (req,res){
 
 //Gets the list of games open for joining
 exports.listOpenGames = function(req,res){
-    connections.getOpenGames(function (openList){
+    CONNECTIONS.getOpenGames(function (openList){
         res.json(openList);
     });    
 };
@@ -31,7 +31,7 @@ exports.createGame = function(req,res){
     var numGames = req.body.numGames;
     var betPerGame = req.body.betPerGame;
     
-    conections.createGame(numGames,betPerGame);
+    CONECTIONS.createGame(numGames,betPerGame);
     
     var creationSuccess = {status:"success"};
     //passes back that the creation was successful
@@ -40,7 +40,7 @@ exports.createGame = function(req,res){
 
 //Requests to join a game and returns accept,denied,or pending
 exports.checkInvitation = function(req,res){
-    var invStatus = connections.checkInvitation();
+    var invStatus = CONNECTIONS.checkInvitation();
     var returnedStatus = {status:invStatus};
     
     res.json(returnedStatus);
@@ -48,5 +48,5 @@ exports.checkInvitation = function(req,res){
 
 //Gets a list of clients attempting to join your game.Returns an empty array if no clients attempting to join
 exports.checkForInvitations = function(req,res){
-    res.json(connections.checkForInvitations());
+    res.json(CONNECTIONS.checkForInvitations());
 };
