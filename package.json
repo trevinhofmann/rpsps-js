@@ -4,8 +4,8 @@
   "description": "A NodeJS browser-based implementation of Rock-Paper-Scissors Protocol Secure",
   "homepage": "https://github.com/thofmann/rpsps-js",
   "repository": {
-	"type": "git",
-	"url": "https://github.com/thofmann/rpsps-js.git"
+    "type": "git",
+    "url": "https://github.com/thofmann/rpsps-js.git"
   },
   "bugs": {
     "url": "https://github.com/thofmann/rpsps-js/issues",
@@ -26,8 +26,7 @@
     }
   ],
   "dependencies": {
-    "express": "*",
-    "bitcore": "*"
+    "express": "*"
   },
   "main": "app.js"
 }
