@@ -4,6 +4,9 @@ var app = express();
 // Use 'views' as the directory for HTML views.
 app.set('views', __dirname + '/views');
 
+GLOBAL.CONNECTIONS = require('./lib/connections');
+GLOBAL.GAME = require('./lib/game');
+
 // Render static files from the 'public' directory.
 app.use(express.static(__dirname + '/public/app/'));
 
