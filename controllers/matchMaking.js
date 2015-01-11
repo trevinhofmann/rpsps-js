@@ -12,7 +12,6 @@ exports.invite = function (req,res){
         };
         
         var connectionSuccess ={status:success};
-    
         //sends connection status back up to the client
         res.json(connectionSuccess);
     });
