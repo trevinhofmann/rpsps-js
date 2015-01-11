@@ -28,7 +28,7 @@ angular.module('myApp.create', ['ngRoute'])
 		    $location.path('/waiting');
 
 		}).
-	  error(function(data, status, headers, config) {
+		error(function(data, status, headers, config) {
 	    //some error
 		});
 	};

@@ -20,4 +20,17 @@ angular.module('myApp.browse', ['ngRoute', 'ngResource'])
   error(function(data, status, headers, config) {
     //some error
 	});
+
+  var invite = function(ip) {
+  	$http.post('http://localhost:7175/local/invite', ip).
+
+		success(function(data, status, headers, config) {
+		    $location.path('/game');
+
+		}).
+		error(function(data, status, headers, config) {
+	    //some error
+		});
+  }
+
 }]);

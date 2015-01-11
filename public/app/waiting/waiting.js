@@ -10,14 +10,39 @@ angular.module('myApp.waiting', ['ngRoute'])
 }])
 
 .controller('WaitingCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
-	$scope.offers = {};
 
+	var accept = function(info) {
+		$http.post('http://localhost:7175/local/accept', info).
+
+		success(function(data, status, headers, config) {
+		    console.log(data)
+
+		    $location.path('/game');
+
+		}).
+		error(function(data, status, headers, config) {
+		    //some error
+		});
+	};
+
+	var decline = function(info) {
+		$http.post('http://localhost:7175/local/decline', info).
+
+		success(function(data, status, headers, config) {
+		    console.log(data)
+
+		}).
+		error(function(data, status, headers, config) {
+		    //some error
+		});
+	};
 
 	var polling = setInterval(function() {
 		$http.get('http://localhost:7175/local/checkForInvitations').
-	
+
 		success(function(data, status, headers, config) {
-	    console.log(data);
+			$scope.offers = data;
+		  console.log(data);
 	    
 		}).
 	  error(function(data, status, headers, config) {

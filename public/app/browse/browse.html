@@ -5,12 +5,14 @@
 			<th>Number of Games</th>
 			<th>Bet per Game</th>
 			<th>IP</th>
+			<th><!--INVITE--></th>
 		</tr>
 		<tr ng-repeat="game in games">
 	 		<td>{{game.nickname}}</td>
 	 		<td>{{game.numGames}}</td>
 	 		<td>{{game.betPerGame}}</td>
-	 		<td>{{game.ip}}</td>	
+	 		<td>{{game.ip}}</td>
+	 		<td><button class="btn btn-success" ng-click="invite(game.ip)">Invite</button></td>
 	 	</tr>
 	</table>
 </div>
