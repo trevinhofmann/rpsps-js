@@ -16,6 +16,7 @@ angular.module('myApp.waiting', ['ngRoute'])
 
 		success(function(data, status, headers, config) {
 		    console.log(data)
+		    console.log("passed")
 		    if( polling ) {
 					clearInterval(polling);
 				}
@@ -43,6 +44,7 @@ angular.module('myApp.waiting', ['ngRoute'])
 		$http.get('http://localhost:7175/local/checkForInvitations').
 
 		success(function(data, status, headers, config) {
+			console.log($scope.offers);
 			$scope.offers = data;
 	    
 		}).
