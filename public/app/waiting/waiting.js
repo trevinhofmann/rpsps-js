@@ -11,21 +11,23 @@ angular.module('myApp.waiting', ['ngRoute'])
 
 .controller('WaitingCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
 
-	var accept = function(info) {
+	$scope.accept = function(info) {
 		$http.post('http://localhost:7175/local/accept', info).
 
 		success(function(data, status, headers, config) {
 		    console.log(data)
+		    if( polling ) {
+					clearInterval(polling);
+				}
 
 		    $location.path('/game');
-
 		}).
 		error(function(data, status, headers, config) {
 		    //some error
 		});
 	};
 
-	var decline = function(info) {
+	$scope.decline = function(info) {
 		$http.post('http://localhost:7175/local/decline', info).
 
 		success(function(data, status, headers, config) {
@@ -42,7 +44,6 @@ angular.module('myApp.waiting', ['ngRoute'])
 
 		success(function(data, status, headers, config) {
 			$scope.offers = data;
-		  console.log(data);
 	    
 		}).
 	  error(function(data, status, headers, config) {
