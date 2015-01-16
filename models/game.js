@@ -2,7 +2,7 @@
 
 var Game = function(){
   this.data.decisions = {};
-}
+};
 
 Game.prototype.setDecision = function(player, decision){
   player = player.toString();
@@ -13,7 +13,7 @@ Game.prototype.setDecision = function(player, decision){
     throw 'Decision must be "rock", "paper", or "scissors".';
   }
   this.data.decisions.player = decision;
-}
+};
 
 Game.prototype.winner = function(){
   if (typeof this.data.decisions.1 == 'undefined'){
@@ -35,6 +35,6 @@ Game.prototype.winner = function(){
     winner = 1;
   }
   return winner;
-}
+};
 
 module.exports = Game;
