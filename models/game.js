@@ -1,9 +1,11 @@
 'use strict';
 
+// A model for a single game of rock-paper-scissors
 var Game = function(){
   this.data.decisions = {};
 };
 
+// Set the decision (rock, paper or scissors) for a player (1 or 2)
 Game.prototype.setDecision = function(player, decision){
   player = player.toString();
   if (player != '1' && player != '2'){
@@ -15,6 +17,7 @@ Game.prototype.setDecision = function(player, decision){
   this.data.decisions.player = decision;
 };
 
+// Determine the winner of the game
 Game.prototype.winner = function(){
   if (typeof this.data.decisions.1 == 'undefined'){
     throw 'Player 1 must decide.';
