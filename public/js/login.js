@@ -3,7 +3,11 @@
 $(document).ready(function(){
 
   $('#login-submit').click(function(){
-    // handle login
+    
+    var passphrase = $('#login-mnemonic').val();
+    var mnemonic = new Mnemonic(passphrase);
+    xpriv = mnemonic.toHDPrivateKey();
+    
   });
 
 });
