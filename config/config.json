@@ -1,31 +1,36 @@
 {
 
-    
+    "express": {
+        "view cache": false,
+        "view engine": "jade",
+        "views": "path:./public/templates/"
+    },
+
+    "view engines": {
+        "jade": {
+            "module": "jade",
+            "renderer": "__express"
+        }
+    },
 
     "middleware": {
-
         "static": {
             "module": {
                 "arguments": [ "path:./.build" ]
             }
-        }
-
-        ,"router": {
+        },
+        "router": {
             "module": {
                 "arguments": [{ "directory": "path:./controllers" }]
             }
-        }
-
-        
-        ,"expressView": {
+        },
+        "expressView": {
             "priority": 100,
             "enabled": true,
             "module": {
                 "name": "engine-munger/lib/expressView"
             }
         }
-        
-
-        
     }
+
 }

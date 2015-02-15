@@ -16,7 +16,6 @@
     "express": "^4.3.0",
     "kraken-devtools": "^1.0.0",
     "kraken-js": "^1.0.1",
-    "localizr": "^0.1.0",
     "stylus": "^0.42.3",
     "jade": "*"
   },
