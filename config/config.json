@@ -19,7 +19,7 @@
             "priority": 40,
             "module": {
                 "name": "serve-static",
-                "arguments": [ "path:./build" ]
+                "arguments": [ "path:.build" ]
             }
         },
         "router": {
