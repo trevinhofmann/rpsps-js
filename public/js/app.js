@@ -4,9 +4,10 @@ var bitcore = require('bitcore');
 var message = require('bitcore-message');
 var mnemonic = require('bitcore-mnemonic');
 
-$(document).ready(function(){
+var navigation;
 
-  $('#login').hide();
-  $('#register').hide();
+$(document).ready(function(){
+  
+  navigation = new Navigation();
   
 });
