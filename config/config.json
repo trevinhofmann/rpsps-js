@@ -15,8 +15,11 @@
 
     "middleware": {
         "static": {
+            "enabled": true,
+            "priority": 40,
             "module": {
-                "arguments": [ "path:./.build" ]
+                "name": "serve-static",
+                "arguments": [ "path:./public" ]
             }
         },
         "router": {
