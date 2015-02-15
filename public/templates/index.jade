@@ -17,10 +17,11 @@ html
           a.navbar-brand(href='#') Rock, Paper, Scissors
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.active: a(href='#') Home
-            li: a(href='#create') Create a game
-            li: a(href='#join') Join a game
+            li#nav-home.active: a Home
+            li#nav-login: a Login
+            li#nav-register: a Register
     .container
       #index
-        h1 Rock, Paper, Scissors
-        p.lead Welcome to Rock, Paper, Scissors.
+        .jumbotron
+          h1 Rock, Paper, Scissors
+          p.lead Welcome to Rock, Paper, Scissors.
