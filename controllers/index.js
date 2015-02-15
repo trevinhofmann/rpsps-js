@@ -5,8 +5,6 @@ var AppModel = require('../models/app');
 
 
 module.exports = function (router) {
-  
-    console.log('hi');
 
     var model = new AppModel();
 
