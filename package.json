@@ -19,7 +19,8 @@
     "stylus": "^0.42.3",
     "jade": "*",
     "bitcore": "*",
-    "bitcore-message": "*"
+    "bitcore-message": "*",
+    "bitcore-mnemonic": "*"
   },
   "devDependencies": {
     "grunt": "^0.4.1",

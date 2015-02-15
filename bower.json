@@ -10,7 +10,8 @@
   "main": "index.js",
   "dependencies": {
     "bitcore": "*",
-    "bitcore-message": "*",
+    "bitcore-message": "*",,
+    "bitcore-mnemonic": "*"
     "bootstrap": "*",
     "jquery": "*"
   }
