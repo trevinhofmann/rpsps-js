@@ -1,3 +1,3 @@
-# RPSPS: Rock-Paper-Scissors Protocol Secure
+# rpsps-js
 
-RPSPS is a peer-to-peer protocol for playing cryptographically secured games of rock-paper-scissors.
+A Node.js browser-based implementation of Rock-Paper-Scissors Protocol Secure

@@ -1,35 +1,37 @@
 {
   "name": "rpsps-js",
-  "version": "0.0.1",
-  "description": "A NodeJS browser-based implementation of Rock-Paper-Scissors Protocol Secure",
-  "homepage": "https://github.com/thofmann/rpsps-js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/thofmann/rpsps-js.git"
+  "version": "0.1.0",
+  "description": "A Node.js browser-based implementation of Rock-Paper-Scissors Protocol Secure",
+  "author": "Trevin Hofmann",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
   },
-  "bugs": {
-    "url": "https://github.com/thofmann/rpsps-js/issues",
-    "email": "trevinhofmann@gmail.com"
-  },
-  "contributors": [
-    {
-      "name": "Trevin Hofmann",
-      "email": "trevinhofmann@gmail.com"
-    },
-    {
-      "name": "Quentin Caffero",
-      "email": "cafferoq@msoe.edu"
-    },
-    {
-      "name": "Jake Robers",
-      "email": "robersj@msoe.edu"
-    }
-  ],
   "dependencies": {
-    "express": "*",
-    "request": "*",
-    "body-parser": "*",
-    "multer": "*"
+    "engine-munger": "^0.2.0",
+    "express": "^4.3.0",
+    "kraken-devtools": "^1.0.0",
+    "kraken-js": "^1.0.1",
+    "localizr": "^0.1.0",
+    "stylus": "^0.42.3"
   },
-  "main": "app.js"
+  "devDependencies": {
+    "grunt": "^0.4.1",
+    "grunt-config-dir": "^0.3.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-stylus": "^0.13.2",
+    "grunt-copy-to": "0.0.10",
+    "grunt-localizr": "^0.1.0",
+    "grunt-mocha-cli": "^1.5.0",
+    "mocha": "^1.18.0",
+    "supertest": "^0.9.0"
+  },
+  "generator-kraken": {
+    "version": "1.1.2",
+    "template": false,
+    "css": "stylus",
+    "js": false,
+    "task": "grunt"
+  }
 }
