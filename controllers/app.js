@@ -1,16 +1,16 @@
 'use strict';
 
 
-var IndexModel = require('../models/index');
+var AppModel = require('../models/app');
 
 
 module.exports = function (router) {
 
-    var model = new IndexModel();
+    var model = new AppModel();
 
     router.get('/', function (req, res) {
         
-        res.render('index', model);
+        res.render('app', model);
         
     });
 
