@@ -24,4 +24,5 @@ Navigation.prototype.to = function(page) {
   }
   $('#'+this.currentPage).hide();
   $('#'+page).show();
+  this.currentPage = page;
 };
