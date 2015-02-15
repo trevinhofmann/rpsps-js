@@ -8,3 +8,4 @@ tmp
 .idea
 .project
 .build
+npm-debug.log
