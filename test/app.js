@@ -30,14 +30,11 @@ describe('/', function () {
     });
 
 
-    it('should say "hello"', function (done) {
+    it('should render html', function (done) {
         request(mock)
             .get('/')
             .expect(200)
             .expect('Content-Type', /html/)
-            
-                .expect(/"name": "app"/)
-            
             .end(function (err, res) {
                 done(err);
             });
