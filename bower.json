@@ -10,6 +10,7 @@
   "main": "index.js",
   "dependencies": {
     "bitcore": "*",
-    "bootstrap": "*"
+    "bootstrap": "*",
+    "jquery": "*"
   }
 }
