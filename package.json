@@ -2,7 +2,11 @@
   "name": "rpsps-js",
   "version": "0.1.0",
   "description": "A Node.js browser-based implementation of Rock-Paper-Scissors Protocol Secure",
-  "author": "Trevin Hofmann",
+  "authors": [
+    "Trevin Hofmann <trevinhofmann@gmail.com>",
+    "Quentin Caffero <cafferoq@msoe.edu>",
+    "Jake Robers <robersj@msoe.edu>"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "grunt test"
