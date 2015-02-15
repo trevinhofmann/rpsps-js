@@ -17,7 +17,9 @@
     "kraken-devtools": "^1.0.0",
     "kraken-js": "^1.0.1",
     "stylus": "^0.42.3",
-    "jade": "*"
+    "jade": "*",
+    "bitcore": "*",
+    "bitcore-message": "*"
   },
   "devDependencies": {
     "grunt": "^0.4.1",
