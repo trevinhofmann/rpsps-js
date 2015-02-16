@@ -11,6 +11,7 @@ $(document).ready(function(){
     if ($('#register-mnemonic-confirm').val() == $('#register-mnemonic').val()){
       var mnemonic = new Mnemonic($('#register-mnemonic-confirm').val());
       xpriv = mnemonic.toHDPrivateKey();
+      navigation.to('home');
     }
   });
 
