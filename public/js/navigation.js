@@ -5,7 +5,8 @@ function Navigation() {
   this.pages = [
     'index',
     'login',
-    'register'
+    'register',
+    'home'
   ];
 
   this.currentPage = 'index';
