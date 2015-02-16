@@ -15,6 +15,12 @@ $(document).ready(function(){
     }
     
   });
+
+  $('#register-back').click(function(){
+    
+    navigation.to('index');
+    
+  });
   
   $('#register-mnemonic-confirm').change(function(){
   

@@ -10,4 +10,10 @@ $(document).ready(function(){
     
   });
 
+  $('#login-back').click(function(){
+    
+    navigation.to('index');
+    
+  });
+
 });
