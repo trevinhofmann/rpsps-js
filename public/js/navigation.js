@@ -6,7 +6,9 @@ function Navigation() {
     'index',
     'login',
     'register',
-    'home'
+    'home',
+    'browse',
+    'create'
   ];
 
   this.currentPage = 'index';
