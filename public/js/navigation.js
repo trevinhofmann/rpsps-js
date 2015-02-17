@@ -8,7 +8,9 @@ function Navigation() {
     'register',
     'home',
     'browse',
-    'create'
+    'create',
+    'deposit',
+    'withdraw'
   ];
 
   this.currentPage = 'index';
