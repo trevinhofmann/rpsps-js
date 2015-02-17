@@ -10,4 +10,12 @@ $(document).ready(function(){
     navigation.to('create');
   });
 
+  $('#home-deposit').click(function(){
+    navigation.to('deposit');
+  });
+
+  $('#home-withdraw').click(function(){
+    navigation.to('withdraw');
+  });
+
 });
