@@ -5,14 +5,9 @@
     form
       input#register-mnemonic.form-control(type='text', placeholder='mnemonic passphrase', disabled='disabled')
     p.lead Please save this passphrase somewhere, and enter it in the space below to confirm.
-    input#register-mnemonic-confirm.form-control(type='text', placeholder='mnemonic passphrase')
-    br
-    .row
-      .col-md-4
-      .col-md-4
-        button#register-submit.btn.btn-primary.btn-block Submit
-    br
-    .row
-      .col-md-4
-      .col-md-4
-        button#register-back.btn.btn-danger.btn-block Go back
+    form
+      input#register-mnemonic-confirm.form-control(type='text', placeholder='mnemonic passphrase')
+    p
+      a#register-submit.btn.btn-lg.btn-primary(role='button') Submit
+      |  
+      a#register-back.btn.btn-lg.btn-danger(role='button') Go back
