@@ -14,3 +14,5 @@ bower install
 grunt
 npm start
 ```
+
+Navigate to http://localhost:8000/ in your browser.
