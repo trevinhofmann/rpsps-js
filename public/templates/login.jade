@@ -2,14 +2,9 @@
   .jumbotron
     h1 Login
     p.lead Enter your mnemonic passphrase to begin playing.
-    input#login-mnemonic.form-control(type='text', placeholder='mnemonic passphrase')
-    br
-    .row
-      .col-md-4
-      .col-md-4
-        button#login-submit.btn.btn-primary.btn-block Submit
-    br
-    .row
-      .col-md-4
-      .col-md-4
-        button#login-back.btn.btn-danger.btn-block Go back
+    form
+      input#login-mnemonic.form-control(type='text', placeholder='mnemonic passphrase')
+    p
+      a#login-submit.btn.btn-lg.btn-primary(role='button') Submit
+      |  
+      a#login-back.btn.btn-lg.btn-danger(role='button') Go back
