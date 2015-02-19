@@ -10,7 +10,7 @@ $(document).ready(function(){
   $('#register-submit').click(function(){
     if ($('#register-mnemonic-confirm').val() == $('#register-mnemonic').val()){
       var mnemonic = new Mnemonic($('#register-mnemonic-confirm').val());
-      xpriv = mnemonic.toHDPrivateKey();
+      wallet.hdPrivateKey = mnemonic.toHDPrivateKey();
       navigation.to('home');
     }
   });
