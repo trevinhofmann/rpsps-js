@@ -9,7 +9,7 @@ A Node.js browser-based implementation of Rock-Paper-Scissors Protocol Secure
 git clone https://github.com/thofmann/rpsps-js.git
 cd rpsps-js
 npm install
-npm install bower grunt -g
+npm install bower grunt-cli -g
 bower install
 grunt
 npm start
