@@ -6,6 +6,7 @@ $(document).ready(function(){
     var passphrase = $('#login-mnemonic').val();
     var mnemonic = new Mnemonic(passphrase);
     wallet.hdPrivateKey = mnemonic.toHDPrivateKey();
+    wallet.startUpdating();
     navigation.to('home');
   });
 
